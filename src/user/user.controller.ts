@@ -6,7 +6,7 @@ import { UserService } from './user.service'
 export class UserController {
 	constructor(private readonly userService: UserService) {}
 	@Post('/login')
-	login(@Body() dto: LoginDTO) {
+async	login(@Body() dto: LoginDTO) {
 		return this.userService.login(dto)
 	}
 }
