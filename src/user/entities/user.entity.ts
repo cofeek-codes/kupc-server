@@ -10,8 +10,7 @@ export class User {
 	email: string
 	@Column()
 	login: string
-	@Column()
-	avatar: string
+
 	@Column()
 	password: string
 }
