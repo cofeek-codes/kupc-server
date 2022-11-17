@@ -6,16 +6,30 @@ import { User } from './entities/user.entity'
 
 @Injectable()
 export class UserService {
-	async login(dto: LoginDTO) {
-		const mockUser: User = {
-			id: Date.now(),
-			email: 'somemail@mail.ru',
-			password: dto.password,
-			avatar: Date.now().toString() + '.jpg',
-			login: dto.login,
-			nickName: dto.login,
+	 users:User[] = [
+		{
+			id: 1,
+			email: 'vasya@mail.com',
+			password: 'qwerty',
+			nickName: 'vasya',
+			login: 'vasya123'
+		},
+		{
+			id: 2,
+			email: 'kolya@mail.com',
+			password: 'kolyA111',
+			nickName: 'kolya',
+			login: 'kolya345'
+		},
+		{
+			id: 3,
+			email: 'artyom@mail.com',
+			password: 'Arti780',
+			nickName: 'artyom',
+			login: 'artyom777'
 		}
-		const token = `wkpdkawrf${Date.now().toString()}kepakr`
-		return { ...mockUser, token }
+	]
+	async login(dto: LoginDTO) {
+		
 	}
 }
